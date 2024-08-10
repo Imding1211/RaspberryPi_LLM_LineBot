@@ -1,14 +1,12 @@
 <a id="readme-top"></a>
-# Raspberry_Pi_LineBot
+# Raspberry_Pi_AI_LineBot
 
 
 <ol>
   <li><a href="#about-the-project">About The Project</a></li>
   <li><a href="#built-with">Built With</a></li>
   <li><a href="#getting-started">Getting Started</a></li>
-  <li><a href="#usage">Usage</a></li>
   <li><a href="#contact">Contact</a></li>
-  <li><a href="#references">References</a></li>
 </ol>
 
 ## About The Project
@@ -28,26 +26,30 @@ This project demonstrates a Retrieval-Augmented Generation (RAG) system utilizin
 
 ## Getting Started
 
+Go to the Line Developer to create your messaging API.
+
+[Line Developer](https://developers.line.biz/zh-hant/services/messaging-api/)
+
 To get a local copy up and running, follow these simple steps.
 
 1. Create a new conda environment
    ```sh
-   conda create --name AI_LineBot python=3.11
+   conda create --name Raspberry_Pi_AI_LineBot python=3.11
    ```
    
 2. Activate environment
    ```sh
-   conda activate AI_LineBot
+   conda activate Raspberry_Pi_AI_LineBot
    ```
 
 3. Clone the repo
    ```sh
-   git clone https://github.com/Imding1211/Raspberry_Pi_LineBot.git
+   git clone https://github.com/Imding1211/Raspberry_Pi_AI_LineBot.git
    ```
    
 4. Change directory
    ```sh
-   cd AI_LineBot
+   cd Raspberry_Pi_AI_LineBot
    ```
    
 5. Install the required Python packages
@@ -71,52 +73,46 @@ To get a local copy up and running, follow these simple steps.
    ollama run gemma2:2b
    ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## Usage
-
-* When running it for the first time, you need to create the ChromaDB database first.
-   ```sh
-   python main.py populate
-   ```
-
-* After creating the database, you can start the program using the following command.
-   ```sh
-   python main.py run
-   ```
-
-* You can use the following example questions to test if the program is running successfully.
-   ```
-   What hardware setup was used for training this models?
-   ```
+10. Add your Line token and secret to the token and secret variables in main.py.
+    ```sh
+    token = 'your Line token'
+    secret = 'your Line secret'
+    ```
    
-* When the following message appears, it means the program is running successfully.
-   ```
-   1 machine with 8 NVIDIA P100 GPUs.
-   ```
+11. Install Ngrok
+
+    [Download Ngrok](https://ngrok.com/download)
+
+12. Activate Flask
+    ```sh
+    nohup python main.py > Raspberry_Pi_AI_LineBot.log 2>&1 &
+    ```
+
+13. Activate Ngrok
+    ```sh
+    nohup ngrok http http://localhost:8080 > Raspberry_Pi_AI_LineBot_ngrok.log 2>&1 &
+    ```
    
-* You can place your PDF files into the "data" folder, and run the following command to populate data to the database.
-   ```sh
-   python main.py populate
-   ```
+14. Get your API URL.
+    ```sh
+    wget http://127.0.0.1:4040/api/tunnels
+    cat tunnels
+    ```
 
-* Or you can rebuild the database using the following command.
-   ```sh
-   python main.py populate --reset
-  ```
+    Find "public_url," which is your API URL.
 
+15. Paste your URL into your Line Developer Webhook URL.
+    ```sh
+    Your URL/callback
+    ```
+    
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Contact
 
 Chi Heng Ting - a0986772199@gmail.com
 
-Project Link - https://github.com/Imding1211/RAG_LLM
+Project Link - https://github.com/Imding1211/Raspberry_Pi_AI_LineBot
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## References
-
-[rag-tutorial-v2](https://github.com/pixegami/rag-tutorial-v2)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>

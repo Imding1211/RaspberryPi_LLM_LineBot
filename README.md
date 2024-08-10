@@ -11,7 +11,7 @@
 
 ## About The Project
 
-This project demonstrates a Retrieval-Augmented Generation (RAG) system utilizing the latest Language Model (LLM) technologies. By leveraging PDF documents as the data source, ChromaDB as the database for efficient retrieval, and Llama3 for language modeling, this project aims to provide high-quality, contextually relevant responses. The embedding model used is MXBAI-embed-large, deployed by Ollama, ensuring robust vector representations of the data.
+The Raspberry_Pi_AI_LineBot is an intelligent chatbot built for the LINE messaging platform, leveraging AI capabilities on a Raspberry Pi. The bot uses the Ollama language model, specifically the Gemma2 2b, to provide insightful responses to users' queries. This project demonstrates how to integrate a powerful AI model into a lightweight, portable environment like the Raspberry Pi, making it accessible and easy to deploy.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

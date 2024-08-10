@@ -14,8 +14,6 @@ from AI import generate_response
 
 import re
 
-import card
-
 app = Flask(__name__)
 
 token = 'your Line token'

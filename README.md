@@ -1,5 +1,5 @@
 <a id="readme-top"></a>
-# Raspberry_Pi_AI_LineBot
+# RaspberryPi_LLM_LineBot
 
 
 <ol>
@@ -11,7 +11,7 @@
 
 ## About The Project
 
-The Raspberry_Pi_AI_LineBot is an intelligent chatbot built for the LINE messaging platform, leveraging AI capabilities on a Raspberry Pi. The bot uses the Ollama language model, specifically the Gemma2 2b, to provide insightful responses to users' queries. This project demonstrates how to integrate a powerful AI model into a lightweight, portable environment like the Raspberry Pi, making it accessible and easy to deploy.
+The RaspberryPi_LLM_LineBot is an intelligent chatbot built for the LINE messaging platform, leveraging AI capabilities on a Raspberry Pi. The bot uses the Ollama language model, specifically the Gemma2 2b, to provide insightful responses to users' queries. This project demonstrates how to integrate a powerful AI model into a lightweight, portable environment like the Raspberry Pi, making it accessible and easy to deploy.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -34,22 +34,22 @@ To get a local copy up and running, follow these simple steps.
 
 1. Create a new conda environment
    ```sh
-   conda create --name Raspberry_Pi_AI_LineBot python=3.11
+   conda create --name RaspberryPi_LLM_LineBot python=3.11
    ```
    
 2. Activate environment
    ```sh
-   conda activate Raspberry_Pi_AI_LineBot
+   conda activate RaspberryPi_LLM_LineBot
    ```
 
 3. Clone the repo
    ```sh
-   git clone https://github.com/Imding1211/Raspberry_Pi_AI_LineBot.git
+   git clone https://github.com/Imding1211/RaspberryPi_LLM_LineBot.git
    ```
    
 4. Change directory
    ```sh
-   cd Raspberry_Pi_AI_LineBot
+   cd RaspberryPi_LLM_LineBot
    ```
    
 5. Install the required Python packages
@@ -85,12 +85,12 @@ To get a local copy up and running, follow these simple steps.
 
 12. Activate Flask
     ```sh
-    nohup python main.py > Raspberry_Pi_AI_LineBot.log 2>&1 &
+    nohup python main.py > RaspberryPi_LLM_LineBot.log 2>&1 &
     ```
 
 13. Activate Ngrok
     ```sh
-    nohup ngrok http http://localhost:8080 > Raspberry_Pi_AI_LineBot_ngrok.log 2>&1 &
+    nohup ngrok http http://localhost:8080 > RaspberryPi_LLM_LineBot_ngrok.log 2>&1 &
     ```
    
 14. Get your API URL.
@@ -112,7 +112,7 @@ To get a local copy up and running, follow these simple steps.
 
 Chi Heng Ting - a0986772199@gmail.com
 
-Project Link - https://github.com/Imding1211/Raspberry_Pi_AI_LineBot
+Project Link - https://github.com/Imding1211/RaspberryPi_LLM_LineBot
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
